@@ -80,3 +80,39 @@
 .review-demo blockquote{font-size:17px;line-height:1.75;margin:20px 0 24px;flex:1}
 .review-demo .review-topic{border-top:1px solid #e3e9dd;padding-top:16px;font-size:12px;color:#536944;margin:0}
 @media(max-width:760px){.feedback-card.review-demo{padding:26px}.review-avatar{width:60px;height:60px;flex-basis:60px}.review-demo blockquote{font-size:17px}.review-stars{margin-top:19px}}
+
+/* A ilha da capa passa a compor o cenário de toda a página. */
+body{background:#0b443c;isolation:isolate;overflow-x:clip}
+body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(5,38,33,.52),rgba(5,38,33,.78) 35%,rgba(5,38,33,.78) 65%,rgba(5,38,33,.52)),url('assets/fundo-ilha-dos-enigmas.png') center/cover no-repeat}
+.header{color:#f7fce9}
+.header nav a:hover{color:var(--lime)}
+.header .button{background:#d6f26c;color:#103e33;border-color:#d6f26c}
+.hero{color:#f7fce9;padding-top:40px;padding-bottom:65px}
+.hero h1{text-shadow:0 3px 22px #052b3266}
+.hero h1 em{color:#dcf77c}
+.hero .eyebrow{color:#e3f3bc}
+.hero .eyebrow>span{border-color:#dcf77c}
+.hero-description,.hero .under-cta{color:#f0f6eb}
+.hero-tags span{background:#103e33cc;border-color:#c8e7bb66;color:#f2f9e7}
+.hero .button{background:#d6f26c;border-color:#d6f26c;color:#103e33;box-shadow:0 4px 0 #88a840,0 12px 26px #052b3233}
+.hero .button:hover,.header .button:hover{background:#e6ff9a}
+.vsl-slot{background:#0a302bed;border-color:#ccf0c266;box-shadow:0 20px 50px #001d2b40}
+.numbers{background:#e3f3d8f2;border-color:#bfd9bd}
+.intro,.benefits,.preview-section,.feedback-section,.faq-section,.closing,.footer{position:relative;isolation:isolate}
+.intro::before,.benefits::before,.preview-section::before,.feedback-section::before,.faq-section::before,.closing::before,.footer::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);z-index:-1;pointer-events:none;background:rgba(224,242,229,.96)}
+.benefits::before{background:rgba(224,242,229,.96)}
+.collection{background:rgba(204,230,211,.97)}
+.age-tabs button:not([aria-selected=true]){color:#375744}
+.age-gallery-wrap{background:linear-gradient(135deg,#d6e7c5,#c2e5dd)}
+.preview-section::before{background:rgba(220,240,230,.96)}
+.feedback-section::before{background:rgba(225,237,202,.96)}
+.feedback-card.review-demo{background:#f9fcf2;border-color:#baccad}
+.offer-section{background:linear-gradient(120deg,rgba(213,237,162,.97),rgba(180,226,204,.97));border-block:1px solid #abcda9}
+.faq-section::before,.closing::before,.footer::before{background:rgba(219,239,220,.97)}
+.closing,.footer{border-color:#afcdb5}
+@media(max-width:760px){
+ body::before{background-position:center,38% center}
+ .hero{padding-top:26px;padding-bottom:48px}
+ .header{padding-block:20px}
+ .hero-description{color:#f3f8ed}
+}
