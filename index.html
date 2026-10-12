@@ -5,11 +5,15 @@
   <title>Missão dos Números | Uma nova aventura com a matemática</title>
   <meta name="description" content="5 cadernos de matemática para crianças de 3 a 12 anos, 300 páginas de atividades e guia com gabaritos. Conheça a coleção completa por R$ 27,90.">
   <meta name="theme-color" content="#123f35"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css"><script src="config.js" defer></script><script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css"><script src="config.js" defer></script><script src="countdown.js" defer></script><script src="app.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
-<div class="announcement">Uma coleção. Cinco fases. Muitas descobertas. <span>Para crianças de 3 a 12 anos</span></div>
+<div class="announcement">
+ <div id="announcement-default">Uma coleção. Cinco fases. Muitas descobertas. <span>Para crianças de 3 a 12 anos</span></div>
+ <div class="offer-countdown" id="offer-countdown" hidden><span class="countdown-label" id="countdown-label">Sua oferta termina em</span><strong class="countdown-value" id="countdown-value" role="timer" aria-label="Tempo restante da sua oferta" aria-live="off">01:20:00</strong><span class="countdown-note">R$ 27,90 · pagamento único</span></div>
+ <span class="sr-only" id="countdown-status" role="status"></span>
+</div>
 <header class="header wrap">
   <a class="brand" href="#" aria-label="Missão dos Números, início"><span class="brand-symbol" aria-hidden="true">m<span>⁺</span></span><span>missão dos<br><strong>números.</strong></span></a>
   <nav aria-label="Navegação principal"><a href="#colecao">A coleção</a><a href="#por-dentro">Veja por dentro</a><a href="#duvidas">Dúvidas</a></nav>
