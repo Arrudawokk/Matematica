@@ -4,6 +4,6 @@ Prazo de 80 minutos iniciado na primeira visita, salvo no localStorage deste nav
 
 Ao zerar, a faixa informa o encerramento, o botão de compra fica desabilitado e o clique verifica novamente o prazo antes de encaminhar ao checkout. Não há reinício automático. Se o armazenamento não estiver disponível, a faixa comum aparece sem anunciar um prazo que não poderia ser preservado.
 
-O controle é local por navegador e domínio, sem identificação da pessoa. Limpar os dados, usar modo privado, mudar de navegador ou dispositivo pode iniciar outro prazo. O checkout ainda não está configurado. Para impedir compras diretas fora do prazo quando estiver ativo, a mesma regra deve ser validada no servidor/plataforma de pagamento; este site estático controla apenas seus próprios botões.
+O controle é local por navegador e domínio, sem identificação da pessoa. Limpar os dados, usar modo privado, mudar de navegador ou dispositivo pode iniciar outro prazo. O checkout da Kiwify está configurado em config.js. O contador exibido na Kiwify é independente e não recebe o prazo salvo no site. Para impedir compras diretas fora do prazo, a mesma regra deve ser validada no servidor/plataforma de pagamento; este site estático controla apenas seus próprios botões.
 
 Testes: `node --test tests/*.test.cjs`.

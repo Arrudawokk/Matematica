@@ -1,3 +1,2 @@
-// Acrescente a URL HTTPS do checkout quando o pagamento estiver configurado.
-// Antes de habilitar vendas, confirme entrega dos PDFs, suporte e revisão do produto.
-window.MISSAO_CONFIG = { checkoutUrl: "" };
+// Checkout da coleção, fornecido pelo responsável pelo produto.
+window.MISSAO_CONFIG = { checkoutUrl: "https://pay.kiwify.com.br/rBDUk0v" };
