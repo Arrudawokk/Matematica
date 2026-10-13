@@ -1,9 +1,7 @@
-# Contador da oferta
+# Disponibilidade da compra
 
-Prazo de 80 minutos iniciado na primeira visita, salvo no localStorage deste navegador. Recarregar, reabrir e alternar entre abas não concede um novo prazo. A contagem usa o horário de término e o relógio atual, inclusive após suspensão da aba.
+A coleção permanece disponível por R$ 27,90, em pagamento único. Não existe prazo por visitante ou bloqueio baseado no armazenamento do navegador.
 
-Ao zerar, a faixa informa o encerramento, o botão de compra fica desabilitado e o clique verifica novamente o prazo antes de encaminhar ao checkout. Não há reinício automático. Se o armazenamento não estiver disponível, a faixa comum aparece sem anunciar um prazo que não poderia ser preservado.
+O banner destaca o preço sem anunciar encerramento. Os botões encaminham ao checkout HTTPS configurado em dist/config.js. Registros antigos de contagem no localStorage são ignorados.
 
-O controle é local por navegador e domínio, sem identificação da pessoa. Limpar os dados, usar modo privado, mudar de navegador ou dispositivo pode iniciar outro prazo. O checkout da Kiwify está configurado em config.js. O contador exibido na Kiwify é independente e não recebe o prazo salvo no site. Para impedir compras diretas fora do prazo, a mesma regra deve ser validada no servidor/plataforma de pagamento; este site estático controla apenas seus próprios botões.
-
-Testes: `node --test tests/*.test.cjs`.
+O arquivo countdown.js permanece como compatibilidade para páginas antigas em cache; não é carregado pelo HTML atual. O temporizador exibido pela própria Kiwify, se houver, é independente deste site.
