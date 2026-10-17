@@ -52,18 +52,6 @@ const purchaseDialog=document.querySelector('#purchase-dialog');
 let checkout=null;
 try{const url=new URL(window.MISSAO_CONFIG?.checkoutUrl);if(url.protocol==='https:')checkout=url.href;}catch{}
 if(checkout){document.querySelector('#sales-status').textContent='Sim. Use o botão de compra para consultar as condições e concluir seu pedido na página de pagamento. A coleção custa R$ 27,90, em pagamento único.';}
-function closeExpiredOffer() {
- if (!window.MISSAO_OFFER?.isExpired()) return;
- document.querySelectorAll('[data-buy]').forEach(button=>{button.disabled=true;button.textContent='Oferta encerrada';});
- document.querySelector('#sales-status').textContent='O prazo de 1h20 desta oferta terminou neste navegador. A compra por esta oferta está encerrada.';
- document.querySelector('.price-note').textContent='Prazo desta oferta encerrado';
- document.querySelectorAll('.hero .under-cta,.mobile-offer-price em').forEach(el=>{el.textContent='Prazo desta oferta encerrado';});
- const stickyButton=document.querySelector('.mobile-offer-cta');
- if(stickyButton)stickyButton.textContent='Ver coleção';
- if(purchaseDialog.open)purchaseDialog.close();
-}
-window.addEventListener('missao:offer-expired',closeExpiredOffer);
-closeExpiredOffer();
-document.querySelectorAll('[data-buy]').forEach(button=>button.addEventListener('click',()=>{if(window.MISSAO_OFFER?.isExpired()){closeExpiredOffer();return;}if(checkout){window.location.assign(checkout);}else{purchaseDialog.showModal();}}));
+document.querySelectorAll('[data-buy]').forEach(button=>button.addEventListener('click',()=>{if(checkout){window.location.assign(checkout);}else{purchaseDialog.showModal();}}));
 document.querySelector('#explore-samples').addEventListener('click',()=>{purchaseDialog.close();document.querySelector('#por-dentro').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});document.querySelector('[data-sample]').focus({preventScroll:true});});
 document.querySelector('#year').textContent=new Date().getFullYear();
